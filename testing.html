@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Friendship Journey</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Responsive and Mobile-First Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFF0F5;
+            line-height: 1.6;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Responsive Navigation */
+        .mobile-nav {
+            background-color: #FF69B4;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .mobile-nav-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        .mobile-nav-btn img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-element {
+            animation: float 2s ease-in-out infinite;
+        }
+
+        /* Responsive Typography & Layout */
+        @media (max-width: 640px) {
+            body {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 { 
+                font-size: 1.2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+
+            .mobile-nav-btn span {
+                display: none; /* Hide text in nav on small screens */
+            }
+        }
+    </style>
+</head>
+<body class="bg-pink-50 text-gray-800">
+    <!-- Home Page -->
+    <div id="home" class="page active container mx-auto px-4 py-6">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-6 text-pink-700">Heyyy Akshuuuuu...!!</h1>
+            <p class="max-w-2xl mx-auto text-xl mb-8">I know things haven't been the same lately, and I want to make things right.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-lg floating-element">
+                    <img src="https://via.pla" alt="Our Memories" class="mx-auto mb-4 rounded-full w-48 h-48">
+                    <h3 class="text-2xl font-semibold text-pink-600">Our Memories</h3>
+                    <p>Remembering the good times we've shared</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg floating-element">
+                    <img src="https://via.placeholder.com/300/300?text=Journey" alt="Friendship" class="mx-auto mb-4 rounded-full w-48 h-48">
+                    <h3 class="text-2xl font-semibold text-pink-600">Our Journey</h3>
+                    <p>A story of friendship that means everything</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memories Page -->
+    <div id="memories" class="page container mx-auto px-4 py-6">
+        <h2 class="text-3xl text-center mb-10 text-pink-700">Our Special Memories</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4">First Meeting</h3>
+                <p>Remember when we first met? It feels like yesterday...</p>
+                <textarea class="w-full mt-4 p-2 border rounded" placeholder="Write about our first memory"></textarea>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4">Crazy Adventures</h3>
+                <p>All those times we laughed until we cried...</p>
+                <textarea class="w-full mt-4 p-2 border rounded" placeholder="Share our craziest moment"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Questions Page -->
+    <div id="questions" class="page container mx-auto px-4 py-6">
+        <h2 class="text-3xl text-center mb-10 text-pink-700">Questions for You</h2>
+        <div class="space-y-6">
+            <div class="bg-pink-100 p-6 rounded-lg">
+                <h3 class="font-bold mb-4">Do you remember our inside jokes?</h3>
+                <textarea class="w-full p-2 rounded" placeholder="Write about our special jokes"></textarea>
+            </div>
+            <div class="bg-pink-100 p-6 rounded-lg">
+                <h3 class="font-bold mb-4">What's the most precious memory for you?</h3>
+                <textarea class="w-full p-2 rounded" placeholder="Tell me about our best moment"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apology Page -->
+    <div id="apology" class="page container mx-auto px-4 py-6">
+        <div class="text-center">
+            <h2 class="text-3xl mb-6 text-pink-700">I'm Sorry</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <p class="mb-4">I know I haven't been the best friend lately. I realize I haven't been giving you the time and attention you deserve.</p>
+                <p class="mb-4">Our friendship means the world to me, and I promise to do better.</p>
+                <div class="flex justify-center space-x-4 mt-6">
+                    <button class="bg-pink-500 text-white px-6 py-2 rounded-full">I Promise to Change</button>
+                    <button class="bg-pink-200 text-pink-800 px-6 py-2 rounded-full">Let's Talk</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="#" class="mobile-nav-btn" onclick="showPage('home')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Home_icon_orange.png" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="#" class="mobile-nav-btn" onclick="showPage('memories')">
+            <img src="https://static.thenounproject.com/png/5496219-200.png" alt="Memories">
+            <span>Memories</span>
+        </a>
+        <a href="#" class="mobile-nav-btn" onclick="showPage('questions')">
+            <img src="https://cdn-icons-png.flaticon.com/512/5726/5726532.png" alt="Questions">
+            <span>Questions</span>
+        </a>
+        <a href="#" class="mobile-nav-btn" onclick="showPage('apology')">
+            <img src="https://png.pngtree.com/png-vector/20220616/ourmid/pngtree-sad-apologizing-emoticon-holding-a-sign-with-the-text-sorry-png-image_5103588.png" alt="Apology">
+            <span>Apology</span>
+        </a>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Add event listeners to save textarea content
+        document.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', function() {
+                localStorage.setItem(this.getAttribute('placeholder'), this.value);
+            });
+
+            // Restore saved content
+            const savedContent = localStorage.getItem(textarea.getAttribute('placeholder'));
+            if (savedContent) {
+                textarea.value = savedContent;
+            }
+        });
+
+        // Button interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Your response has been noted. I hope we can talk soon!');
+            });
+        });
+    </script>
+</body>
+</html>
+
